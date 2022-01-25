@@ -14,6 +14,14 @@ struct Resume: Identifiable {
     var work: [Work]?
     var volunteer: [Volunteer]?
     var education: [Education]?
+    var awards: [Award]?
+    var certificates: [Certificate]?
+    var publications: [Publication]?
+    var skills: [Skill]?
+    var languages: [Language]?
+    var interests: [Interest]?
+    var references: [Reference]?
+    var projects: [Project]?
     
 }
 
@@ -71,7 +79,6 @@ struct Volunteer: Identifiable {
     var summary: String?
     var highlights: [String]?
     var thumbnail: String?
-    
 }
 
 struct Education: Identifiable {
@@ -89,6 +96,76 @@ struct Education: Identifiable {
     var courses: [String]?
     var thumbnail: String?
 
+}
+
+struct Award: Identifiable {
+    var id: String
+    var title: String?
+    var date: String?
+    var awarder: String?
+    var summary: String?
+    var thumbnail: String?
+}
+
+struct Certificate: Identifiable {
+    var id: String
+    var name: String?
+    var date: String?
+    var issuer: String?
+    var url: String?
+    var thumbnail: String?
+}
+
+struct Publication: Identifiable {
+    var id: String
+    var name: String?
+    var publisher: String?
+    var releaseDate: String?
+    var url: String?
+    var summary: String?
+    var thumbnail: String?
+}
+
+struct Skill: Identifiable {
+    var id: String
+    var name: String?
+    var level: String?
+    var keywords: [String]?
+}
+
+struct Language: Identifiable {
+    var id: String
+    var language: String?
+    var fluency: String?
+}
+
+struct Interest: Identifiable {
+    var id: String
+    var name: String?
+    var keywords: [String]?
+}
+
+struct Reference: Identifiable {
+    var id: String
+    var name: String?
+    var reference: String?
+}
+
+struct Project: Identifiable {
+    var id: String
+    var name: String?
+    var description: String?
+    var highlights: [String]?
+    var keywords: [String]?
+    var startDate: String?
+    var endDate: String?
+    var url: String?
+    var roles: [String]?
+    var entity: String?
+    var type: String?
+    var thumbnails: [String]?
+    var videos: [Video]?
+    
 }
 
 struct Video: Identifiable {
