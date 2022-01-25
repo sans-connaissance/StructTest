@@ -21,6 +21,6 @@ struct ResumeItemImageView: View {
 
 struct ResumeItemImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ResumeItemImageView(imageString: davidMalickeBasics.image!)
+        ResumeItemImageView(imageString: basics.image!)
     }
 }
