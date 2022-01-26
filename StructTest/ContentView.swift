@@ -182,7 +182,16 @@ let davidMalicke = Resume(
     id: UUID().uuidString,
     basics: basics,
     work: [frankfurtIndustries],
-    volunteer: nil)
+    volunteer: nil,
+    education: [masterDegree, bachelorDegree, associateDegree, hackingWithSwift],
+    awards: nil, // are the academic things worth putting here?
+    certificates: nil,
+    publications: nil,
+    skills: nil,
+    languages: nil,
+    interests: nil,
+    references: nil,
+    projects: nil)
     
 
 let basics = Basics(
@@ -224,6 +233,86 @@ let frankfurtIndustries = Work(
     summary: "Design, develop, and publish iOS apps for Frankfurt Industries, LLC.",
     highlights: ["Design, develop and publish UM SalaryPub on the App Store.", "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.", "Built UM SalaryPub with SwiftUI following MVVM, and designed the CoreData model from the ground up. UM SalaryPub also takes advantage of an imported UIKit Charts package, which combined with SwiftUI and CoreData delivers a fast and responsive user experience."],
     thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
+
+let masterDegree = Education(
+    id: UUID().uuidString,
+    institution: "University of Michigan",
+    schoolName: "School of Information",
+    degreeName: "Master of Science in Information",
+    specialization: "Archives and Records Management",
+    url: "https://www.si.umich.edu",
+    area: "Ann Arbor, MI",
+    studyType: "formal", //maybe this should be an enum later
+    startDate: "2009-01-03",
+    endDate: "2011-04-15",
+    score: "3.8",
+    courses: ["SI 501: Contextual Inquiry and Consulting Foundations",
+              "SI 502: Networked Computing: Storage, Communication, and Processing",
+              "SI 510: Data Security and Privacy: Legal, Policy and Enterprise Issues",
+              "SI 543: Introductory Programming",
+              "SI 572: Database Application Design",
+              "SI 622: Needs Assessment and Usability Evaluation",
+              "SI 631: Content Management Systems"], //add all courses
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Horace_H._Rackham_School_of_Graduate_Studies_%28March_2008%29.jpg/640px-Horace_H._Rackham_School_of_Graduate_Studies_%28March_2008%29.jpg")
+
+let bachelorDegree = Education(
+    id: UUID().uuidString,
+    institution: "Siena Heights University",
+    schoolName: nil,
+    degreeName: "Bachelor of Business Administration",
+    specialization: "Marketing",
+    url: "https://www.sienaheights.edu",
+    area: "Adrian, MI",
+    studyType: "formal",
+    startDate: nil,
+    endDate: "2007-12-15",
+    score: "3.8",
+    courses: ["SI 501: Contextual Inquiry and Consulting Foundations",
+               "SI 502: Networked Computing: Storage, Communication, and Processing",
+               "SI 510: Data Security and Privacy: Legal, Policy and Enterprise Issues",
+               "SI 543: Introductory Programming",
+               "SI 572: Database Application Design",
+               "SI 622: Needs Assessment and Usability Evaluation",
+               "SI 631: Content Management Systems"],
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Siena_Heights_University_Campus.JPG/640px-Siena_Heights_University_Campus.JPG")
+
+let associateDegree = Education(
+    id: UUID().uuidString,
+    institution: "Macomb Community College",
+    schoolName: nil,
+    degreeName: "Associate of Media and Communications Arts",
+    specialization: "Digital Art and Animation",
+    url: "https://www.macomb.edu",
+    area: "Macomb, MI",
+    studyType: "formal",
+    startDate: nil,
+    endDate: "2004-12-15",
+    score: "3.8",
+    courses: ["SI 501: Contextual Inquiry and Consulting Foundations",
+              "SI 502: Networked Computing: Storage, Communication, and Processing",
+              "SI 510: Data Security and Privacy: Legal, Policy and Enterprise Issues",
+              "SI 543: Introductory Programming",
+              "SI 572: Database Application Design",
+              "SI 622: Needs Assessment and Usability Evaluation",
+              "SI 631: Content Management Systems"],
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MacombcommunitycollegeMIUSA.jpg/640px-MacombcommunitycollegeMIUSA.jpg")
+
+let hackingWithSwift = Education(
+    id: UUID().uuidString,
+    institution: "Hacking with Swift",
+    schoolName: nil,
+    degreeName: nil,
+    specialization: nil,
+    url: "https://www.hackingwithswift.com",
+    area: nil,
+    studyType: "self-paced learning",
+    startDate: nil,
+    endDate: nil,
+    score: nil,
+    courses: ["100 Days of Swift"],
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MacombcommunitycollegeMIUSA.jpg/640px-MacombcommunitycollegeMIUSA.jpg")
+
+
 
 
 
