@@ -185,15 +185,14 @@ let davidMalicke = Resume(
     volunteer: nil,
     education: [masterDegree, bachelorDegree, associateDegree, hackingWithSwift],
     awards: nil, // are the academic things worth putting here?
-    certificates: nil,
-    publications: nil,
-    skills: nil,
-    languages: nil,
+    certificates: [coreDataCert, leBienLeJusteCert],
+    publications: [medAndSciencePub],
+    skills: [foundationalSkill, iosDev, operations, digitalPublishing, intellectualProperty, business],
+    languages: [english, french],
     interests: nil,
     references: nil,
-    projects: nil)
+    projects: [umSalaryPub])
     
-
 let basics = Basics(
     id: UUID().uuidString,
     name: "David Malicke",
@@ -312,8 +311,91 @@ let hackingWithSwift = Education(
     courses: ["100 Days of Swift"],
     thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MacombcommunitycollegeMIUSA.jpg/640px-MacombcommunitycollegeMIUSA.jpg")
 
+let coreDataCert = Certificate(
+    id: UUID().uuidString,
+    name: "Core Data in iOS",
+    date: "2022-01-01",
+    issuer: "udemy",
+    url: "https://www.udemy.com/certificate/UC-c0dd6fe0-1aa5-4e2d-90a9-466f5d1d729f/",
+    thumbnail: "https://picsum.photos/200/303")
 
+let leBienLeJusteCert = Certificate(
+    id: UUID().uuidString,
+    name: "Le Bien, le Juste, l'Utile. Introduction aux éthiques philosophiques",
+    date: "2020-02-23",
+    issuer: "Université de Genève",
+    url: "https://www.coursera.org/account/accomplishments/verify/A75THDC4VZ74",
+    thumbnail: "https://picsum.photos/200/35")
 
+let medAndSciencePub = Publication(
+    id: UUID().uuidString,
+    name: "Medical and Scientific Publishing: Author, Editor, and Reviewer Perspectives",
+    publisher: "Elsevier",
+    releaseDate: "2017-11-10",
+    url: "https://www.elsevier.com/books/medical-and-scientific-publishing/markovac/978-0-12-809969-8",
+    summary: "Chapter 2: Open Access Journal Publishing",
+    thumbnail: "https://secure-ecsd.elsevier.com/covers/80/Tango2/large/9780128099698.jpg")
+
+let foundationalSkill = Skill(
+    id: UUID().uuidString,
+    name: "Foundational Skills",
+    level: "Professional",
+    keywords: ["Growth Mindset", "Learner", "Curious", "Critical", "Committement", "Emotional Intelligence"])
+
+let iosDev = Skill(
+    id: UUID().uuidString,
+    name: "iOS Developer Skills",
+    level: "Junior",
+    keywords: ["Agile", "CoreData", "GIT", "MVVM", "Vapor", "StackOverflow", "Swift",  "SwiftUI", "XCode"])
+
+let operations = Skill(
+    id: UUID().uuidString,
+    name: "Operations Lead Skill",
+    level: "Seasoned Professional",
+    keywords: ["Project Management", "Change Management", "Continuous Improvement", "Business Analysis", "Process Analysis", "Communication"])
+
+let digitalPublishing = Skill(
+    id: UUID().uuidString,
+    name: "Digital Publishing Skill",
+    level: "Seasoned Professional",
+    keywords: ["Editing", "Publishing", "Content Management Systems", "Drupal", "WordPress", "Wiki", "Meta Data", "Self-Publishing", "Guidelines", "Publishing Contracts", "Licensing"])
+
+let intellectualProperty = Skill(
+    id: UUID().uuidString,
+    name: "Intellectual Property Skill",
+    level: "Professional",
+    keywords: ["Copyright", "Fair Use", "Creative Commons Licensing", "Clearance", "WordPress", "Wiki", "Trademark"])
+
+let business = Skill(
+    id: UUID().uuidString,
+    name: "Business Skill",
+    level: "Professional",
+    keywords: ["Accounting", "Memorandum of Understanding", "", "Clearance", "WordPress", "Wiki", "Trademark"])
+
+let english = Language(
+    id: UUID().uuidString,
+    language: "English",
+    fluency: "Native")
+
+let french = Language(
+    id: UUID().uuidString,
+    language: "French",
+    fluency: "B1")
+
+let umSalaryPub = Project(
+    id: UUID().uuidString,
+    name: "UM SalaryPub",
+    description: "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.",
+    highlights: ["List of a bunch of things about the project", "Another list of things"],
+    keywords: ["iOS, SwiftUI, CoreData, UIKit"],
+    startDate: "2020-11-01",
+    endDate: "2021-04-01",
+    url: "https://apps.apple.com/us/app/um-salarypub/id1564602975",
+    roles: ["Lead iOS Developer", "UX Designer", "Publisher"],
+    entity: "Frankfurt Industries",
+    type: "App", // probably needs to be an enum
+    thumbnails: ["https://picsum.photos/200/301", "https://picsum.photos/200/302", "https://picsum.photos/200/303"],
+    videos: nil)
 
 
 struct ContentView: View {
